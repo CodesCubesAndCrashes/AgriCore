@@ -47,6 +47,10 @@ public class AgriCondition extends AgriStack {
 		this.max_z = max_z;
 	}
 
+	public int getAmount() {
+		return amount;
+	}
+
 	public int getMinX() {
 		return min_x;
 	}
@@ -86,7 +90,7 @@ public class AgriCondition extends AgriStack {
 		final StringBuilder sb = new StringBuilder();
 		sb.append("\nCondition:");
 		sb.append("\n\t- ").append(super.toString().replaceAll("\n", "\n\t").trim());
-		sb.append("\n\t- Amount: ").append(amount);
+		sb.append("\n\t- Amount: ").append(getAmount());
 		sb.append("\n\t- Min Coord: (").append(min_x).append(", ").append(min_y).append(", ").append(min_z).append(")");
 		sb.append("\n\t- Max Coord: (").append(max_x).append(", ").append(max_y).append(", ").append(max_z).append(")");
 		return sb.toString();
